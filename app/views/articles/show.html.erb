@@ -1,3 +1,6 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.content %></p>
 <p><%= link_to 'Back to list', articles_path %></p>
+<%= link_to article_path(@article), method: :delete, data: { confirm: "Remove #{@article.title}?"} do %>
+   <i class="fas fa-times"></i>
+<% end %>
